@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>이슬기 | Frontend Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef2ff',
+            100: '#e0e7ff',
+            500: '#6366f1',
+            600: '#4f46e5',
+            700: '#4338ca',
+          },
+        },
+        fontFamily: {
+          sans: ['"Pretendard"', '"Noto Sans KR"', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #4f46e5, #818cf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+</style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-sm border-b border-slate-100">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#top" class="font-bold text-lg tracking-tight">이슬기<span class="text-brand-600">.</span></a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+        <li><a href="#about" class="hover:text-brand-600 transition">소개</a></li>
+        <li><a href="#skills" class="hover:text-brand-600 transition">기술 스택</a></li>
+        <li><a href="#projects" class="hover:text-brand-600 transition">프로젝트</a></li>
+        <li><a href="#contact" class="hover:text-brand-600 transition">연락처</a></li>
+      </ul>
+      <a href="#contact" class="hidden md:inline-block bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-full transition">
+        연락하기
+      </a>
+      <button id="menu-btn" class="md:hidden text-slate-700" aria-label="메뉴 열기">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t border-slate-100">
+      <ul class="flex flex-col gap-3 text-sm font-medium text-slate-600 pt-3">
+        <li><a href="#about" class="block hover:text-brand-600 transition">소개</a></li>
+        <li><a href="#skills" class="block hover:text-brand-600 transition">기술 스택</a></li>
+        <li><a href="#projects" class="block hover:text-brand-600 transition">프로젝트</a></li>
+        <li><a href="#contact" class="block hover:text-brand-600 transition">연락처</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative pt-40 pb-28 px-6 overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-70"></div>
+    <div class="absolute top-40 -left-32 w-72 h-72 bg-indigo-50 rounded-full blur-3xl opacity-70"></div>
+
+    <div class="relative max-w-3xl mx-auto text-center">
+      <p class="fade-in inline-block text-sm font-semibold text-brand-600 bg-brand-50 px-4 py-1.5 rounded-full mb-6">
+        Frontend Developer Wannabe
+      </p>
+      <h1 class="fade-in text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+        안녕하세요, <span class="gradient-text">이슬기</span>입니다
+      </h1>
+      <p class="fade-in text-lg md:text-xl text-slate-500 mb-10 leading-relaxed">
+        역량있는 프론트엔드 개발자 지망생
+      </p>
+      <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg shadow-brand-100">
+          프로젝트 보기
+        </a>
+        <a href="#contact" class="bg-white border border-slate-200 hover:border-brand-300 text-slate-700 font-semibold px-6 py-3 rounded-full transition">
+          연락하기
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6 bg-slate-50">
+    <div class="max-w-3xl mx-auto text-center fade-in">
+      <h2 class="text-sm font-semibold text-brand-600 mb-3 tracking-widest uppercase">About Me</h2>
+      <p class="text-2xl md:text-3xl font-bold leading-snug text-slate-800">
+        피아노 건반 위를 걷던 손끝이,<br class="hidden sm:block" />
+        이제는 코드를 두드립니다.
+      </p>
+      <p class="mt-6 text-lg text-slate-500 leading-relaxed">
+        피아노를 전공하며 섬세함과 몰입을 배웠고, 남편과 함께 새로운 도전을 시작하며
+        개발이라는 무대에 올랐습니다. 낯선 언어를 익히듯 코드를 배우고,
+        연주하듯 하나씩 완성해나가는 프론트엔드 개발자를 꿈꿉니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14 fade-in">
+        <h2 class="text-sm font-semibold text-brand-600 mb-3 tracking-widest uppercase">Skills</h2>
+        <p class="text-3xl font-bold">기술 스택</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
+        <div class="fade-in bg-white border border-slate-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <p class="font-bold text-slate-800">HTML</p>
+        </div>
+        <div class="fade-in bg-white border border-slate-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <p class="font-bold text-slate-800">CSS</p>
+        </div>
+        <div class="fade-in bg-white border border-slate-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <p class="font-bold text-slate-800">JavaScript</p>
+        </div>
+        <div class="fade-in bg-white border border-slate-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <p class="font-bold text-slate-800">TypeScript</p>
+        </div>
+        <div class="fade-in bg-white border border-slate-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <p class="font-bold text-slate-800">React</p>
+        </div>
+        <div class="fade-in bg-white border border-brand-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition bg-brand-50/40">
+          <p class="font-bold text-brand-700">Claude Code AI</p>
+          <p class="text-xs text-slate-500 mt-1">AI 페어 프로그래밍 활용</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24 px-6 bg-slate-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14 fade-in">
+        <h2 class="text-sm font-semibold text-brand-600 mb-3 tracking-widest uppercase">Projects</h2>
+        <p class="text-3xl font-bold">프로젝트</p>
+      </div>
+
+      <div class="fade-in bg-white border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition max-w-2xl mx-auto">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-3 py-1 rounded-full">SNS Web Service</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">onebite-log</h3>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          일상의 기록을 가볍게 남기고 공유할 수 있는 SNS 웹 서비스입니다.
+        </p>
+        <!-- TODO: 실제 배포 주소가 생기면 href를 채워주세요 -->
+        <a href="#" class="inline-flex items-center gap-2 font-semibold text-brand-600 hover:text-brand-700 transition">
+          바로가기
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6">
+    <div class="max-w-2xl mx-auto text-center fade-in">
+      <h2 class="text-sm font-semibold text-brand-600 mb-3 tracking-widest uppercase">Contact</h2>
+      <p class="text-3xl font-bold mb-6">함께 이야기 나눠요</p>
+      <p class="text-slate-500 mb-8">궁금한 점이나 협업 제안은 언제든 편하게 연락 주세요.</p>
+      <a href="mailto:pnoni0618@gmail.com"
+         class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg shadow-brand-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        pnoni0618@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-slate-400 border-t border-slate-100">
+    &copy; 2026 Seulgi Lee. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
