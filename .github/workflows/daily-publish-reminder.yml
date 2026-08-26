@@ -20,11 +20,11 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: scripts
+        working-directory: 06.AutoBlog/scripts
         run: npm install
 
       - name: Select today's posts and notify
-        working-directory: scripts
+        working-directory: 06.AutoBlog/scripts
         run: npx tsx select-and-notify.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

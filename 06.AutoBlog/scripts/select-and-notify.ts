@@ -20,10 +20,18 @@ const CONTENT_DIRS: Record<string, { queue: string; published: string }> = {
   },
 };
 
+// gray-matter의 YAML 파서가 createdAt처럼 날짜 형식 문자열을 Date 객체로 자동 변환하는 경우가 있어,
+// 문자열/Date 어느 쪽이 오더라도 안전하게 비교할 수 있도록 타임스탬프로 정규화한다.
+function toTimestamp(value: unknown): number {
+  if (!value) return 0;
+  const date = value instanceof Date ? value : new Date(String(value));
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
 function pickOldestQueued(posts: Post[]): Post | undefined {
   return posts
     .filter((p) => p.frontmatter.status === "queued")
-    .sort((a, b) => (a.frontmatter.createdAt ?? "").localeCompare(b.frontmatter.createdAt ?? ""))[0];
+    .sort((a, b) => toTimestamp(a.frontmatter.createdAt) - toTimestamp(b.frontmatter.createdAt))[0];
 }
 
 function renderSection(platform: string, post: Post, content: string): string {

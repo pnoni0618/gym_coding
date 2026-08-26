@@ -2,6 +2,8 @@
 
 티스토리("생생꿀정보통")와 네이버 블로그의 꾸준한 발행을 위한 콘텐츠 큐 + GitHub Actions 알림 시스템입니다.
 
+> 전체 목표, 현재 상태, 리스크, 의사결정 기록은 [`roadmap.md`](./roadmap.md)를 참고하세요.
+
 ## 왜 "완전 자동 게시"가 아닌가
 
 티스토리 Open API(글쓰기 포함)는 2023년 말~2024년 초 카카오에 의해 완전히 서비스 종료되었고,
@@ -21,6 +23,17 @@
 3. 사람이 이슈 내용을 복사해 실제 에디터에 붙여넣고 발행합니다.
 4. 발행 후 `cd scripts && npx tsx mark-published.ts <tistory|naver> <slug> <발행된 URL>`을 실행해
    해당 글을 `published/` 폴더로 옮기고 frontmatter를 갱신합니다.
+
+## 자동 실행 확인 방법
+
+이 저장소(`gym_coding`)는 여러 프로젝트가 한 저장소에 모여있는 모노레포라서, GitHub Actions 워크플로
+파일은 `06.AutoBlog/` 안이 아니라 **저장소 최상위** `.github/workflows/daily-publish-reminder.yml`에
+있어야 인식됩니다 (GitHub이 워크플로를 스캔하는 위치가 고정되어 있기 때문). 실행 여부는 아래에서 확인하세요.
+
+- 실행 이력: https://github.com/pnoni0618/gym_coding/actions/workflows/daily-publish-reminder.yml
+- 수동 실행(테스트): 위 페이지 우측의 "Run workflow" 버튼 → `workflow_dispatch`로 즉시 1회 실행 가능
+  (매일 정해진 시각까지 기다리지 않고 지금 바로 테스트할 때 사용)
+- 실행 결과로 이슈가 생성되면: https://github.com/pnoni0618/gym_coding/issues 에서 확인
 
 ## 새 글 추가하기
 
