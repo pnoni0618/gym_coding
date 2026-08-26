@@ -1,0 +1,30 @@
+name: Daily Publish Reminder
+
+on:
+  schedule:
+    - cron: "0 22 * * *" # 22:00 UTC = 07:00 KST (다음날)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Select today's posts and notify
+        working-directory: scripts
+        run: npx tsx select-and-notify.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
