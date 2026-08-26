@@ -4,7 +4,7 @@
     "dueDays": ["Mon", "Wed", "Fri", "Sun"]
   },
   "naver": {
-    "postsPerWeek": 2,
-    "dueDays": ["Tue", "Sat"]
+    "postsPerWeek": 3,
+    "dueDays": ["Tue", "Thu", "Sat"]
   }
 }
