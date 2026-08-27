@@ -1,8 +1,12 @@
 import { Post, readPostsInDir } from "./frontmatter.js";
 
 // 한국어 콘텐츠는 공백 기준 어절수가 아니라 글자수(공백 포함)로 분량을 재는 것이 관례입니다.
-// 1,500자는 네이버/구글에서 통상 권장되는 최소 분량 기준입니다.
-const MIN_CHAR_COUNT = 1500;
+// 티스토리는 구글 상위노출을 노리는 정보성 글이라 1,500자 이상, 네이버는 가독성 중심의 짧은 글이라
+// 800자 이상을 최소 기준으로 삼습니다 (기준 근거는 CLAUDE.md 참고).
+const MIN_CHAR_COUNT: Record<Post["frontmatter"]["platform"], number> = {
+  tistory: 1500,
+  naver: 800,
+};
 const DISCLAIMER_HINTS = [
   "정보 제공 목적",
   "법률·세무 자문이 아닙니다",
@@ -23,9 +27,10 @@ export function checkQuality(post: Post, publishedDir: string): QualityResult {
   const reasons: string[] = [];
   const { frontmatter, body } = post;
 
+  const minCharCount = MIN_CHAR_COUNT[frontmatter.platform];
   const charCount = countChars(body);
-  if (charCount < MIN_CHAR_COUNT) {
-    reasons.push(`본문이 너무 짧습니다 (${charCount}자 < 최소 ${MIN_CHAR_COUNT}자)`);
+  if (charCount < minCharCount) {
+    reasons.push(`본문이 너무 짧습니다 (${charCount}자 < 최소 ${minCharCount}자)`);
   }
 
   const hasDisclaimerText = DISCLAIMER_HINTS.some((hint) => body.includes(hint));
