@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { Octokit } from "@octokit/rest";
 import { Post, readPostsInDir } from "./lib/frontmatter.js";
 import { checkQuality } from "./lib/qualityGate.js";
-import { loadCadence, isDueToday } from "./lib/selectDue.js";
+import { loadCadence, isDueToday, previousDueDate } from "./lib/selectDue.js";
 import { formatForTistory } from "./lib/formatForTistory.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -34,10 +34,18 @@ function pickOldestQueued(posts: Post[]): Post | undefined {
     .sort((a, b) => toTimestamp(a.frontmatter.createdAt) - toTimestamp(b.frontmatter.createdAt))[0];
 }
 
-function renderSection(platform: string, post: Post, content: string): string {
+function renderSection(platform: string, post: Post, content: string, isStale: boolean): string {
   const label = platform === "tistory" ? "티스토리" : "네이버";
   const relPath = path.relative(REPO_ROOT, post.filePath).replace(/\\/g, "/");
+  const staleWarning = isStale
+    ? [
+        "⚠️ 이 글은 지난 발행일에도 대기 중이었습니다. 혹시 이미 발행하셨다면 " +
+          "`mark-published.ts`를 먼저 실행해 발행 완료 처리부터 해주세요.",
+        "",
+      ]
+    : [];
   return [
+    ...staleWarning,
     `## ${label}: ${post.frontmatter.title}`,
     `- 파일: \`${relPath}\``,
     `- 카테고리: ${post.frontmatter.category ?? "-"} / 태그: ${(post.frontmatter.tags ?? []).join(", ")}`,
@@ -50,7 +58,7 @@ function renderSection(platform: string, post: Post, content: string): string {
     "",
     "</details>",
     "",
-    `- [ ] 발행 완료 (발행 후 \`npx tsx mark-published.ts ${platform} ${post.frontmatter.slug} <발행된 URL>\` 실행)`,
+    `- [ ] 발행 완료 (아래 명령의 URL 부분을 실제 발행 주소로 바꾸고 scripts 폴더에서 실행: \`cd scripts && npx tsx mark-published.ts ${platform} ${post.frontmatter.slug} https://발행된-주소\`)`,
   ].join("\n");
 }
 
@@ -117,8 +125,11 @@ async function main(): Promise<void> {
       continue;
     }
 
+    const previousDue = previousDueDate(cadence, platform);
+    const isStale = previousDue !== undefined && toTimestamp(candidate.frontmatter.createdAt) <= previousDue.getTime();
+
     const content = platform === "tistory" ? formatForTistory(candidate.body) : candidate.body;
-    sections.push(renderSection(platform, candidate, content));
+    sections.push(renderSection(platform, candidate, content, isStale));
   }
 
   if (sections.length === 0) {

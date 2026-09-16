@@ -1,16 +1,23 @@
 ---
-title: "퇴직금 계산방법 완벽정리 (계산 공식 + 예시 + 지급기한)"
+title: 퇴직금 계산방법 완벽정리 (계산 공식 + 예시 + 지급기한)
 slug: severance-pay-calculation-guide
 platform: tistory
-status: queued
-category: "임금/퇴직금"
-tags: [퇴직금계산법, 퇴직금계산기, 평균임금, 근로기준법, 퇴직금지급기한]
-targetKeyword: "퇴직금 계산방법"
+status: published
+category: 임금/퇴직금
+tags:
+  - 퇴직금계산법
+  - 퇴직금계산기
+  - 평균임금
+  - 근로기준법
+  - 퇴직금지급기한
+targetKeyword: 퇴직금 계산방법
 createdBy: claude-code-manual
-createdAt: 2026-08-26
+createdAt: 2026-08-26T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-16'
+publishedUrl: 'https://bjsg0606.tistory.com/321'
 ---
 
 ## 퇴직금, 누가 얼마나 받을 수 있을까요

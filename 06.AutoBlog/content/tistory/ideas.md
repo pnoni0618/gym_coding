@@ -47,7 +47,7 @@
 ## 네이버용 세부키워드 (짧고 질문형, 티스토리 유입 유도)
 
 - [x] "2026 최저시급 얼마" → `2026-08-27-min-wage-2026-naver.md` (네이버 테스트 글, 티스토리 318번 링크)
-- "주휴수당 계산 쉽게"
+- [x] "주휴수당 계산 쉽게" → `2026-09-16-weekly-holiday-pay-calculation-naver.md`
 - "퇴직금 계산 방법" → 티스토리 `severance-pay-calculation-guide` 글로 링크
 - "임금체불 신고 어디에"
 

@@ -5,9 +5,9 @@ import { marked } from "marked";
 const SPACING_STYLES: Record<string, string> = {
   h2: "margin:48px 0 24px;line-height:1.5;",
   h3: "margin:36px 0 16px;line-height:1.5;",
-  p: "margin:0 0 24px;line-height:1.9;",
-  ul: "margin:0 0 24px;line-height:1.9;",
-  ol: "margin:0 0 24px;line-height:1.9;",
+  p: "margin:0 0 48px;line-height:1.9;",
+  ul: "margin:0 0 48px;line-height:1.9;",
+  ol: "margin:0 0 48px;line-height:1.9;",
   li: "margin:0 0 8px;",
   // 인용구는 "카드"처럼 눈에 띄도록 크게, 가운데 정렬로 강조한다 (블록 요소라 자동으로 줄바꿈됨).
   blockquote: "margin:36px 0;padding:28px 24px;line-height:1.9;text-align:center;font-size:1.1em;",
