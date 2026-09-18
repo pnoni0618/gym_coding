@@ -1,16 +1,23 @@
 ---
-title: "주휴수당 계산법 총정리 (아르바이트생을 위한 상세 가이드)"
+title: 주휴수당 계산법 총정리 (아르바이트생을 위한 상세 가이드)
 slug: weekly-holiday-pay-detailed-guide
 platform: tistory
-status: queued
-category: "임금/최저임금"
-tags: [주휴수당계산법, 주휴수당조건, 아르바이트임금, 최저임금, 근로기준법]
-targetKeyword: "주휴수당 계산법"
+status: published
+category: 임금/최저임금
+tags:
+  - 주휴수당계산법
+  - 주휴수당조건
+  - 아르바이트임금
+  - 최저임금
+  - 근로기준법
+targetKeyword: 주휴수당 계산법
 createdBy: claude-code-manual
-createdAt: 2026-09-16
+createdAt: 2026-09-16T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-17'
+publishedUrl: 'https://bjsg0606.tistory.com/319'
 ---
 
 ## 이번 주는 며칠 일했는데, 주휴수당은 왜 안 나왔을까요

@@ -1,8 +1,8 @@
 ---
-title: 임금체불 지연이자 계산법 (연 20%, 언제부터 적용될까)
+title: '임금체불 지연이자 계산법 (연 20%, 언제부터 적용될까)'
 slug: wage-delay-interest-calculation
 platform: tistory
-status: queued
+status: published
 category: 임금/퇴직금
 tags:
   - 임금체불
@@ -16,6 +16,8 @@ createdAt: 2026-09-17T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-17'
+publishedUrl: 'https://bjsg0606.tistory.com/322'
 ---
 
 ## 퇴직금이 늦게 들어왔는데, 이자는 못 받나요

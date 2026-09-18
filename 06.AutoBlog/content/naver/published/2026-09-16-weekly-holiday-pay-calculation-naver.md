@@ -1,16 +1,22 @@
 ---
-title: "주휴수당 계산, 이렇게 하면 헷갈리지 않아요"
+title: '주휴수당 계산, 이렇게 하면 헷갈리지 않아요'
 slug: weekly-holiday-pay-calculation-naver
 platform: naver
-status: queued
-category: "임금/최저임금"
-tags: [주휴수당, 주휴수당계산법, 아르바이트임금, 최저임금]
-targetKeyword: "주휴수당 계산 쉽게"
+status: published
+category: 임금/최저임금
+tags:
+  - 주휴수당
+  - 주휴수당계산법
+  - 아르바이트임금
+  - 최저임금
+targetKeyword: 주휴수당 계산 쉽게
 createdBy: claude-code-manual
-createdAt: 2026-09-16
+createdAt: 2026-09-16T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-17'
+publishedUrl: 'https://blog.naver.com/bjsg0606/224392188849'
 ---
 
 이번 달 급여명세서를 보다가 "주휴수당이 왜 이만큼이지?" 하고 갸우뚱했던 적 있으신가요?

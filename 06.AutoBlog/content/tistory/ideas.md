@@ -49,7 +49,7 @@
 - [x] "2026 최저시급 얼마" → `2026-08-27-min-wage-2026-naver.md` (네이버 테스트 글, 티스토리 318번 링크)
 - [x] "주휴수당 계산 쉽게" → `2026-09-16-weekly-holiday-pay-calculation-naver.md`
 - "퇴직금 계산 방법" → 티스토리 `severance-pay-calculation-guide` 글로 링크
-- [x] "임금체불 신고 어디에" → `2026-09-17-wage-delinquency-report-where-naver.md` (티스토리 링크 없이 독립형, 링크 비율 조절용)
+- [x] "임금체불 신고 어디에" → `2026-09-17-wage-delinquency-report-where-naver.md` (지연이자 계산법 글로 링크 추가 — 최근 3편 중 2편에 링크가 들어간 셈이라, 다음 1~2편은 링크 없이 진행할 것)
 
 ## 발행 캘린더 초안 (cadence.json: 티스토리 월/수/금/일, 네이버 화/토)
 

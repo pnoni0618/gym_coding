@@ -1,8 +1,8 @@
 ---
-title: 임금체불, 신고는 어디에 하면 될까요
+title: '임금체불, 신고는 어디에 하면 될까요'
 slug: wage-delinquency-report-where-naver
 platform: naver
-status: queued
+status: published
 category: 임금/체불
 tags:
   - 임금체불
@@ -15,6 +15,8 @@ createdAt: 2026-09-17T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-17'
+publishedUrl: 'https://blog.naver.com/bjsg0606/224415212916'
 ---
 
 월급날인데 통장에 돈이 안 들어와 있으면 정말 막막하죠. 회사에 물어봐도 "곧 준다"는 말만 반복되면 더 답답해집니다.
@@ -45,6 +47,8 @@ qualityChecklist:
 만약 회사가 도산했거나 지급 능력이 없는 것으로 확인되면, 국가가 체불임금 일부를 먼저 지급해주는 **대지급금 제도**를 이용할 수도 있습니다. 사업주 대신 국가에서 받고, 나중에 국가가 사업주에게 구상하는 방식이라 회사 사정과 무관하게 진행됩니다.
 
 신고를 망설이는 사이 시간만 흐르면 나중에 자료를 모으기 더 어려워지니, 급여명세서와 통장 내역부터 정리해두시는 걸 추천드려요.
+
+그런데 신고까지 갔는데도 지급이 계속 늦어졌다면, 원금만 받고 끝나는 게 아니에요. 퇴직 후 14일이 지나서도 안 준 경우엔 연 20%의 지연이자가 별도로 붙습니다. 실제로 얼마나 더 받을 수 있는지는 [임금체불 지연이자 계산법](https://bjsg0606.tistory.com/322)에 계산 예시와 함께 정리해뒀어요.
 
 ---
 
