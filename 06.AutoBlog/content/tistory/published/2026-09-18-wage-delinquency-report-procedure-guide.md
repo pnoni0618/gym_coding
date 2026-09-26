@@ -2,7 +2,7 @@
 title: 임금체불 신고 방법과 절차 총정리 (진정서 접수부터 대지급금까지)
 slug: wage-delinquency-report-procedure-guide
 platform: tistory
-status: queued
+status: published
 category: 임금/체불
 tags:
   - 임금체불신고
@@ -16,6 +16,8 @@ createdAt: 2026-09-18T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-22'
+publishedUrl: 'https://bjsg0606.tistory.com/324'
 ---
 
 ## 진정서를 냈는데, 그다음엔 어떻게 되는 건가요
