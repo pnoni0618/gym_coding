@@ -28,10 +28,44 @@ function toTimestamp(value: unknown): number {
   return Number.isNaN(date.getTime()) ? 0 : date.getTime();
 }
 
-function pickOldestQueued(posts: Post[]): Post | undefined {
+function pickOldestQueued(
+  posts: Post[],
+  platform: string,
+  notifiedPostKeys: ReadonlySet<string>,
+): Post | undefined {
   return posts
-    .filter((p) => p.frontmatter.status === "queued")
+    .filter(
+      (p) =>
+        p.frontmatter.status === "queued" &&
+        !notifiedPostKeys.has(`${platform}:${p.frontmatter.slug}`),
+    )
     .sort((a, b) => toTimestamp(a.frontmatter.createdAt) - toTimestamp(b.frontmatter.createdAt))[0];
+}
+
+async function getPreviouslyNotifiedPostKeys(currentIssueTitle: string): Promise<Set<string>> {
+  const token = process.env.GITHUB_TOKEN;
+  const repoFull = process.env.GITHUB_REPOSITORY;
+  if (!token || !repoFull) return new Set();
+
+  const [owner, repo] = repoFull.split("/");
+  const octokit = new Octokit({ auth: token });
+  const issues = await octokit.paginate(octokit.issues.listForRepo, {
+    owner,
+    repo,
+    state: "all",
+    labels: "daily-publish",
+    per_page: 100,
+  });
+  const notifiedPostKeys = new Set<string>();
+
+  for (const issue of issues) {
+    if (issue.pull_request || issue.title === currentIssueTitle) continue;
+    for (const match of (issue.body ?? "").matchAll(/mark-published\.ts\s+(tistory|naver)\s+([^\s`]+)/g)) {
+      notifiedPostKeys.add(`${match[1]}:${match[2]}`);
+    }
+  }
+
+  return notifiedPostKeys;
 }
 
 function renderSection(platform: string, post: Post, content: string, isStale: boolean): string {
@@ -62,11 +96,9 @@ function renderSection(platform: string, post: Post, content: string, isStale: b
   ].join("\n");
 }
 
-async function upsertIssue(sections: string[]): Promise<void> {
+async function upsertIssue(sections: string[], title: string): Promise<void> {
   const token = process.env.GITHUB_TOKEN;
   const repoFull = process.env.GITHUB_REPOSITORY;
-  const today = new Date().toISOString().slice(0, 10);
-  const title = `📝 오늘 발행할 글 (${today})`;
   const body = sections.join("\n\n---\n\n");
 
   if (!token || !repoFull) {
@@ -104,6 +136,10 @@ async function upsertIssue(sections: string[]): Promise<void> {
 async function main(): Promise<void> {
   const cadence = loadCadence(path.join(REPO_ROOT, "config/cadence.json"));
   const sections: string[] = [];
+  const today = new Date().toISOString().slice(0, 10);
+  const title = `📝 오늘 발행할 글 (${today})`;
+  const hasDuePlatform = Object.keys(CONTENT_DIRS).some((platform) => isDueToday(cadence, platform));
+  const notifiedPostKeys = hasDuePlatform ? await getPreviouslyNotifiedPostKeys(title) : new Set<string>();
 
   for (const platform of Object.keys(CONTENT_DIRS)) {
     if (!isDueToday(cadence, platform)) {
@@ -113,7 +149,7 @@ async function main(): Promise<void> {
 
     const dirs = CONTENT_DIRS[platform];
     const queued = readPostsInDir(dirs.queue);
-    const candidate = pickOldestQueued(queued);
+    const candidate = pickOldestQueued(queued, platform, notifiedPostKeys);
     if (!candidate) {
       console.log(`[${platform}] 대기 중인 글이 없습니다`);
       continue;
@@ -137,7 +173,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  await upsertIssue(sections);
+  await upsertIssue(sections, title);
 }
 
 main().catch((err) => {

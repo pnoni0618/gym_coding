@@ -1,8 +1,8 @@
 ---
-title: '온누리상품권 사용법 총정리 (지류형·카드형·모바일형 차이부터 사용처 조회까지)'
+title: 온누리상품권 사용법 총정리 (지류형·카드형·모바일형 차이부터 사용처 조회까지)
 slug: onnuri-gift-certificate-guide
 platform: tistory
-status: queued
+status: published
 category: 생활/제도
 tags:
   - 온누리상품권
@@ -16,6 +16,8 @@ createdAt: 2026-09-28T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-09-28'
+publishedUrl: 'https://bjsg0606.tistory.com/325'
 ---
 
 ## 명절 선물로 받은 온누리상품권, 어디서부터 써야 할까
