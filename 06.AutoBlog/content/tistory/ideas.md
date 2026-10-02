@@ -28,10 +28,10 @@
 
 - [x] 임금체불 노동청 신고 방법 및 절차 총정리 → `2026-09-18-wage-delinquency-report-procedure-guide.md` (네이버 09-17 "신고는 어디에" 글의 상세 후속편, 진정 vs 고소·대지급금 종류까지 확장)
 - [ ] 실업급여 신청 자격 및 계산법
-- [ ] 연차수당 계산법 (입사연도별 발생 기준)
+- [x] 연차수당 계산법 (입사연도별 발생 기준) → `2026-10-05-annual-leave-allowance-calculation.md` (네이버 동시 발행: `2026-10-05-annual-leave-allowance-naver.md`)
 - [ ] 4대보험료 계산법 (건강보험/국민연금/고용보험/산재보험)
-- [ ] 통상임금 vs 평균임금 차이와 계산 예시
-- [ ] 퇴직금 IRP 계좌 세금 완벽정리
+- [x] 통상임금 vs 평균임금 차이와 계산 예시 → `2026-10-07-ordinary-wage-vs-average-wage.md`
+- [x] 퇴직금 IRP 계좌 세금 완벽정리 → `2026-10-09-severance-pay-irp-tax-guide.md` (네이버 동시 발행: `2026-10-09-severance-pay-irp-tax-naver.md`, 구체적 세율·감면 비율은 확정 수치 대신 "국세청/금융회사 확인" 원칙으로 작성)
 - [ ] 프리랜서·3.3% 사업소득자의 퇴직금/실업급여 여부
 - [ ] 연말정산 예상 환급액 계산법 (매년 1~2월 시즌 키워드)
 - [ ] 육아휴직급여 계산법
@@ -50,6 +50,8 @@
 - [x] "주휴수당 계산 쉽게" → `2026-09-16-weekly-holiday-pay-calculation-naver.md`
 - "퇴직금 계산 방법" → 티스토리 `severance-pay-calculation-guide` 글로 링크
 - [x] "임금체불 신고 어디에" → `2026-09-17-wage-delinquency-report-where-naver.md` (지연이자 계산법 글로 링크 추가 — 최근 3편 중 2편에 링크가 들어간 셈이라, 다음 1~2편은 링크 없이 진행할 것)
+- [x] "연차수당 계산 쉽게" → `2026-10-05-annual-leave-allowance-naver.md` (링크 없음, 위 지침에 따른 1번째 무링크 편)
+- [x] "퇴직금 IRP 세금" → `2026-10-09-severance-pay-irp-tax-naver.md` (링크 없음, 2번째 무링크 편 — 다음 네이버 글부터는 관련성 있으면 티스토리 링크 다시 고려)
 
 ## 발행 캘린더 초안 (cadence.json: 티스토리 월/수/금/일, 네이버 화/토)
 
