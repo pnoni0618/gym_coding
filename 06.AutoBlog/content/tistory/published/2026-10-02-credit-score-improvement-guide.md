@@ -2,7 +2,7 @@
 title: 신용점수 올리는 방법 (실제로 효과 있는 것만 정리)
 slug: credit-score-improvement-guide
 platform: tistory
-status: queued
+status: published
 category: 금융/신용
 tags:
   - 신용점수
@@ -16,6 +16,8 @@ createdAt: 2026-10-02T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-10-02'
+publishedUrl: 'https://bjsg0606.tistory.com/326'
 ---
 
 ## 대출 받으러 갔다가 금리 보고 놀란 적 있나요
