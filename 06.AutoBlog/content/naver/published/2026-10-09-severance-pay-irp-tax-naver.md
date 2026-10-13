@@ -2,7 +2,7 @@
 title: '퇴직금 받을 때 세금, IRP 계좌로 받으면 달라져요'
 slug: severance-pay-irp-tax-naver
 platform: naver
-status: queued
+status: published
 category: 임금/퇴직금
 tags:
   - 퇴직금세금
@@ -15,6 +15,8 @@ createdAt: 2026-10-09T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-10-07'
+publishedUrl: 'https://blog.naver.com/bjsg0606/224434580687'
 ---
 
 퇴직금 받으려는데 은행에서 "IRP 계좌부터 만드셔야 해요"라는 말 들어보셨나요?

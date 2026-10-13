@@ -2,7 +2,7 @@
 title: 연차수당 계산법 (입사연도별 발생 기준부터 통상임금 계산까지)
 slug: annual-leave-allowance-calculation
 platform: tistory
-status: queued
+status: published
 category: 임금/퇴직금
 tags:
   - 연차수당
@@ -16,6 +16,8 @@ createdAt: 2026-10-05T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-10-04'
+publishedUrl: 'https://bjsg0606.tistory.com/327'
 ---
 
 ## 퇴사할 때 안 쓴 연차, 돈으로 받을 수 있나요

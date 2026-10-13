@@ -1,8 +1,8 @@
 ---
-title: 통상임금 vs 평균임금 차이, 헷갈리지 않게 계산 예시로 정리
+title: '통상임금 vs 평균임금 차이, 헷갈리지 않게 계산 예시로 정리'
 slug: ordinary-wage-vs-average-wage
 platform: tistory
-status: queued
+status: published
 category: 임금/퇴직금
 tags:
   - 통상임금
@@ -16,6 +16,8 @@ createdAt: 2026-10-07T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-10-06'
+publishedUrl: 'https://bjsg0606.tistory.com/328'
 ---
 
 ## 퇴직금 계산기 돌려봤는데 왜 다른 사이트랑 금액이 다르지

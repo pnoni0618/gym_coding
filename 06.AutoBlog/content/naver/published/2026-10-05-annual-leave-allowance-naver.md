@@ -2,7 +2,7 @@
 title: '연차수당 계산, 퇴사 전에 꼭 확인하세요'
 slug: annual-leave-allowance-naver
 platform: naver
-status: queued
+status: published
 category: 임금/퇴직금
 tags:
   - 연차수당
@@ -15,6 +15,8 @@ createdAt: 2026-10-05T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-10-04'
+publishedUrl: 'https://blog.naver.com/bjsg0606/224431270594'
 ---
 
 퇴사 앞두고 "남은 연차는 어떻게 되는 거지" 고민해보신 적 있으세요?

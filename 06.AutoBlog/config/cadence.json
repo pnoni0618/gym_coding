@@ -1,10 +1,10 @@
 {
   "tistory": {
-    "postsPerWeek": 4,
-    "dueDays": ["Mon", "Wed", "Fri", "Sun"]
+    "postsPerWeek": 7,
+    "dueDays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
   },
   "naver": {
-    "postsPerWeek": 3,
-    "dueDays": ["Tue", "Thu", "Sat"]
+    "postsPerWeek": 7,
+    "dueDays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
   }
 }

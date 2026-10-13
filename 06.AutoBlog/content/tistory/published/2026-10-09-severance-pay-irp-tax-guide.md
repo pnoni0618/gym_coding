@@ -2,7 +2,7 @@
 title: 퇴직금 IRP 계좌로 받으면 세금 얼마나 달라질까
 slug: severance-pay-irp-tax-guide
 platform: tistory
-status: queued
+status: published
 category: 임금/퇴직금
 tags:
   - 퇴직금세금
@@ -16,6 +16,8 @@ createdAt: 2026-10-09T00:00:00.000Z
 qualityChecklist:
   hasDisclaimer: true
   hasSources: true
+publishedAt: '2026-10-08'
+publishedUrl: 'https://bjsg0606.tistory.com/330'
 ---
 
 ## 퇴직금 받을 때 IRP 계좌로 넣으라고 하던데, 꼭 그래야 하나요
