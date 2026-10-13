@@ -27,14 +27,16 @@
 ## 우선순위 2 — 기존 니치 확장 (계산기형, 체류시간 김)
 
 - [x] 임금체불 노동청 신고 방법 및 절차 총정리 → `2026-09-18-wage-delinquency-report-procedure-guide.md` (네이버 09-17 "신고는 어디에" 글의 상세 후속편, 진정 vs 고소·대지급금 종류까지 확장)
-- [ ] 실업급여 신청 자격 및 계산법
+- [x] 실업급여 신청 자격 및 계산법 → `2026-10-14-unemployment-benefit-eligibility-guide.md` (네이버: `2026-10-14-unemployment-benefit-eligibility-naver.md`)
 - [x] 연차수당 계산법 (입사연도별 발생 기준) → `2026-10-05-annual-leave-allowance-calculation.md` (네이버 동시 발행: `2026-10-05-annual-leave-allowance-naver.md`)
 - [ ] 4대보험료 계산법 (건강보험/국민연금/고용보험/산재보험)
 - [x] 통상임금 vs 평균임금 차이와 계산 예시 → `2026-10-07-ordinary-wage-vs-average-wage.md`
 - [x] 퇴직금 IRP 계좌 세금 완벽정리 → `2026-10-09-severance-pay-irp-tax-guide.md` (네이버 동시 발행: `2026-10-09-severance-pay-irp-tax-naver.md`, 구체적 세율·감면 비율은 확정 수치 대신 "국세청/금융회사 확인" 원칙으로 작성)
-- [ ] 프리랜서·3.3% 사업소득자의 퇴직금/실업급여 여부
+- [x] 프리랜서·3.3% 사업소득자의 퇴직금/실업급여 여부 → `2026-10-16-freelancer-33-severance-guide.md` (네이버: `2026-10-16-freelancer-33-severance-naver.md`)
 - [ ] 연말정산 예상 환급액 계산법 (매년 1~2월 시즌 키워드)
 - [ ] 육아휴직급여 계산법
+
+- [x] 퇴직금 중간정산 조건 → `2026-10-15-severance-pay-interim-settlement-guide.md` (네이버: `2026-10-15-severance-pay-interim-settlement-naver.md`)
 
 ## 보류 — 근거 불충분, 공식 자료로 재확인 후 작성
 
